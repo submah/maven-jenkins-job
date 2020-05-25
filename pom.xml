@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+<groupId>com.c4clouds</groupId>
+<artifactId>hello-world-war</artifactId>
+<version>0.3</version>
+<packaging>war</packaging>
+<name>Hello World Web Application Repository</name>
+<description>Simplest possible Java Webapp</description>
+
+<distributionManagement>
+    <repository>
+        <id>release</id>
+        <name>artifactory-releases</name>
+        <url>http://34.70.97.76:8081/artifactory/devops-local</url> <!--Change the ip and repository-->
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>artifactory-snapshots</name>
+        <url>http://34.70.97.76:8081/artifactory/devops-local</url> <!--Change the ip and repository-->
+    </snapshotRepository>
+</distributionManagement>
+<build>
+<plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-war-plugin</artifactId>
+<version>2.1.1</version>
+</plugin>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-release-plugin</artifactId>
+<version>2.5.1</version>
+<configuration>
+<tagNameFormat>v@{project.version}</tagNameFormat>
+<autoVersionSubmodules>true</autoVersionSubmodules>
+</configuration>
+</plugin>
+</plugins>
+</build>
+</project>
