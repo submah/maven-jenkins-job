@@ -1,0 +1,14 @@
+# maven-jenkins-job
+<!--
+<distributionManagement>
+    <repository>
+        <id>release</id>
+        <name>artifactory-releases</name>
+        <url>http://34.70.97.76:8081/artifactory/devops-local</url> <!--Change the ip and repository--> -->
+    <!-- </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>artifactory-snapshots</name>
+        <url>http://34.70.97.76:8081/artifactory/devops-local</url> <!--Change the ip and repository--> -->
+   <!--  </snapshotRepository>
+</distributionManagement> --> 
